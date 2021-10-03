@@ -1,5 +1,3 @@
-
-
 interface Dog {
   fact: String;
 }
@@ -10,6 +8,7 @@ function getDogs(): Promise<Dog[]> {
                 // the JSON body is taken from the response
                 .then(res => res.json())
                 .then(res => {
+                     
                   return res as Dog[];
                 })
 }
