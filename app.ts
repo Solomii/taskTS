@@ -3,9 +3,8 @@ interface Dog {
 }
 
 function getDogs(): Promise<Dog[]> {
-        // For now, consider the data is stored on a static `users.json` file
+  
   return fetch('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all')
-                // the JSON body is taken from the response
                 .then(res => res.json())
                 .then(res => {
                      
@@ -13,7 +12,18 @@ function getDogs(): Promise<Dog[]> {
                 })
 }
 const result = document.getElementById('result')
+      
 getDogs()
-        .then(dog => {
-                result.innerHTML = dog.map(dog =>dog.fact).toString()
+  .then(dogFacts => {
+        for (let i = 0; i < dogFacts.length; i++) {
+            let paragraph = document.createElement("p");
+            paragraph.textContent  = dogFacts[i].fact.toString();
+            result?.appendChild(paragraph);
+        }
         })
+
+
+  //    getDogs()
+  // .then(dogFacts => {
+  //   result.innerHTML = dogFacts.map(dog => dog.fact).join("<br/>")      
+  // })
