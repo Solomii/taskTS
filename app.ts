@@ -1,6 +1,4 @@
-interface Dog {
-  fact: String;
-}
+import {Dog} from "./models/dogFacts"
 
 function getDogs(): Promise<Dog[]> {
   
@@ -11,11 +9,12 @@ function getDogs(): Promise<Dog[]> {
                   return res as Dog[];
                 })
 }
+
 const result = document.getElementById('result')
-      
+
 getDogs()
   .then(dogFacts => {
-        for (let i = 0; i < dogFacts.length; i++) {
+    for (let i = 0; i < dogFacts.length; i++) {
             let paragraph = document.createElement("p");
             paragraph.textContent  = dogFacts[i].fact.toString();
             result?.appendChild(paragraph);

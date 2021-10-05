@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 function getDogs() {
     return fetch('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all')
         .then(function (res) { return res.json(); })
