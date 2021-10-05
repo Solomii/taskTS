@@ -1,4 +1,4 @@
-import {Dog} from "./models/dogFacts"
+import {Dog} from "../models/dogFacts"
 
 function getDogs(): Promise<Dog[]> {
   
