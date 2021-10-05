@@ -1,4 +1,5 @@
 import {Dog} from "../models/dogFacts"
+// import { buildParagraphs } from "../dogFactsResult/dogFactsResult";
 
 function getDogs(): Promise<Dog[]> {
   
@@ -21,8 +22,17 @@ getDogs()
         }
         })
 
+// getDogs()
+//   .then(dogFacts => {
+//     buildParagraphs(dogFacts, result);
+
+   
+//   }
+//    )
+
 
   //    getDogs()
   // .then(dogFacts => {
   //   result.innerHTML = dogFacts.map(dog => dog.fact).join("<br/>")      
   // })
+// export { getDogs };

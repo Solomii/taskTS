@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+// import { buildParagraphs } from "../dogFactsResult/dogFactsResult";
 function getDogs() {
     return fetch('https://dog-facts-api.herokuapp.com/api/v1/resources/dogs/all')
         .then(function (res) { return res.json(); })
@@ -16,7 +17,13 @@ getDogs()
         result === null || result === void 0 ? void 0 : result.appendChild(paragraph);
     }
 });
+// getDogs()
+//   .then(dogFacts => {
+//     buildParagraphs(dogFacts, result);
+//   }
+//    )
 //    getDogs()
 // .then(dogFacts => {
 //   result.innerHTML = dogFacts.map(dog => dog.fact).join("<br/>")      
 // })
+// export { getDogs };
