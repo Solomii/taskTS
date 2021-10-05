@@ -1,2 +1,2 @@
 # TS
-[docs](https://solomii.github.io/taskNJ)
+[Dog Facts](https://solomii.github.io/taskNJ)
